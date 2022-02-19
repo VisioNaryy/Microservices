@@ -55,16 +55,6 @@ namespace PlatformService
             });
 
             Console.WriteLine($"--> CommandService Endpoint: {Configuration["CommandServiceUrl"]}");
-
-            //services.AddCors(options =>
-            //{
-            //    options.AddPolicy("AllowOrigin",
-            //        builder => builder
-            //        //.WithOrigins("http://localhost:4200")
-            //        .AllowAnyOrigin()
-            //        .AllowAnyMethod()
-            //        .AllowAnyHeader());
-            //});
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -77,8 +67,6 @@ namespace PlatformService
             }
 
             app.UseRouting();
-
-            //app.UseCors("AllowOrigin");
 
             app.UseAuthorization();
 
